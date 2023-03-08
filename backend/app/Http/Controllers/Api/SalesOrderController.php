@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\SalesOrderRequest;
+
 use App\Http\Services\SalesOrderService;
 
 class SalesOrderController extends Controller
@@ -26,20 +27,17 @@ class SalesOrderController extends Controller
         return $this->salesOrderService->index($request);
     }
 
+    public function show(string $id)
+    {
+        return $this->salesOrderService->show($id);
+    }
+
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
         //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        return $this->salesOrderService->show($id);
     }
 
     /**

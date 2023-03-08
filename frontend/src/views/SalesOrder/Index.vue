@@ -5,6 +5,7 @@
                 <th class="text-left">Invoice</th>
                 <th class="text-left">Customer</th>
                 <th class="text-left">Tanggal</th>
+                <th class="text-left">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,14 @@
                 <td>{{ salesOrder.soInvoice }}</td>
                 <td>{{ salesOrder.customer.customerCode }} - {{ salesOrder.customer.customerName }}</td>
                 <td>{{ salesOrder.soDate }}</td>
+                <td>
+                    <v-btn
+                        color="green-darken-1"
+                        icon="mdi-format-list-bulleted-square"
+                        size="small"
+                        @click="$router.push(`/sales-order/${salesOrder.soId}`)"
+                    />
+                </td>
             </tr>
         </tbody>
     </v-table>

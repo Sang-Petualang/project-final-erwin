@@ -1,11 +1,11 @@
 <template>
-    <v-btn color="info" style="margin-bottom: 10px;" to="/customers/create">
+    <v-btn color="green-accent-4" style="margin-bottom: 10px;" to="/customers/create">
         Add Customer
     </v-btn>
-    <v-btn color="success" style="margin-left: 10px; margin-bottom: 10px;" @click="handldExportXls()">
+    <v-btn color="light-green-darken-4" style="margin-left: 10px; margin-bottom: 10px;" @click="handldExportXls()">
         Export to Xls
     </v-btn>
-    <v-btn color="primary" style="margin-left: 10px; margin-bottom: 10px;" @click="dialog = true">
+    <v-btn color="lime-accent-4" style="margin-left: 10px; margin-bottom: 10px;" @click="dialog = true">
         Import Customers
     </v-btn>
     <v-table>

@@ -17,7 +17,7 @@ class TrxHSalesOrder extends Model
     
     protected $guarded = ['id'];
 
-    public function salesOrderDetail(Type $var = null): HasMany
+    public function salesOrderDetail(): HasMany
     {
         return $this->hasMany(TrxDSalesOrder::class, 'so_h_id', 'id');
     }

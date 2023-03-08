@@ -1,10 +1,11 @@
 <template>
-    <v-sheet class="bg-info pa-16" rounded style="min-height: 100vh; max-height: 100%;">
-        <h2 style="text-align: center" class="mt-16">Login CRM Melawai</h2>
+    <v-sheet class="bg-teal-darken-2 pa-16" rounded style="min-height: 100vh; max-height: 100%;">
+        <h2 style="text-align: center" class="mt-16">Login to CRM Melawai</h2>
         <v-card class="mx-auto px-6 py-8 my-8" max-width="344">
             <v-form ref="form">
                 <v-text-field
                     v-model="email"
+                    placeholder="3rw1n25@gmail.com"
                     :counter="50"
                     :rules="emailRule"
                     label="Email"
@@ -12,6 +13,7 @@
                 />
                 <v-text-field
                     v-model="password"
+                    placeholder="password"
                     :rules="passwordRule"
                     label="Password"
                     type="password"
@@ -19,7 +21,7 @@
                 />
                 <div class="d-flex flex-column">
                     <v-btn
-                        color="success"
+                        color="teal-accent-3"
                         class="mt-4"
                         block
                         @click="validate"
